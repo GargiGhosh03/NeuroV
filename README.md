@@ -1,7 +1,7 @@
 
-# 🧠 Neurofy – Brain Tumor Detection from MRI Scans
+# 🧠 NeuroV – Brain Tumor Detection from MRI Scans
 
-**Neurofy** is a deep learning-based web application that detects the presence of brain tumors from MRI scans in `.nii` or `.nii.gz` format. The system is built with **Flask** for the web backend and **PyTorch** for the inference engine, and provides slice-level confidence visualization using **Chart.js**.
+**NeuroV** is a deep learning-based web application that detects the presence of brain tumors from MRI scans in `.nii` or `.nii.gz` format. The system is built with **Flask** for the web backend and **PyTorch** for the inference engine, and provides slice-level confidence visualization using **Chart.js**.
 
 ---
 
