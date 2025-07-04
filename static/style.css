@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  padding-top: 100px;
+}
+
+/* === NAVBAR === */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.navbar a:hover {
+  background-color: #a2bbee;
+}
+
+.navbar a.active {
+  background-color: #b5f5b4;
+  color: #000;
+}
+
+.badge {
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+/* === MAIN CONTAINER === */
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* === UPLOAD BOX === */
+.upload-box {
+  flex: 1;
+  max-width: 400px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.upload-box h2 {
+  margin-bottom: 1.5rem;
+  color: #2e3a59;
+  font-size: 1.6rem;
+}
+
+.upload-label {
+  display: block;
+  cursor: pointer;
+  background-color: #eef2f5;
+  padding: 1.5rem;
+  border: 2px dashed #aaa;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  color: #444;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.upload-label:hover {
+  background-color: #e3e9ef;
+}
+
+.plus-icon {
+  font-size: 2.5rem;
+  color: #2e3a59;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Hide actual file input */
+input[type="file"] {
+  display: none;
+}
+
+.upload-box button {
+  padding: 0.6rem 1.5rem;
+  background-color: #2e3a59;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.upload-box button:hover {
+  background-color: #1d263a;
+}
+
+/* === RESULTS === */
+.results {
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.results h2 {
+  color: #2e3a59;
+  margin-bottom: 0.5rem;
+}
+
+.results p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.results h3 {
+  margin-top: 2rem;
+  color: #2e3a59;
+}
+
+/* === CHART CONTAINER === */
+canvas#sliceChart {
+  max-width: 500px;
+  margin: 1rem auto;
+}
+
+/* === CALL BUTTON === */
+.call-button {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: #40739e;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s;
+  z-index: 999;
+}
+
+.call-button:hover {
+  background-color: #a2bbee;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #2f3640;
+  color: #bdcaf3;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
