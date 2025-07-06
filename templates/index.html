@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NeuroV</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <a href="{{ url_for('treatments') }}">Treatments</a>
+      <a href="{{ url_for('symptoms') }}">Symptoms</a>
+      <a href="{{ url_for('consult') }}">Consult a Doctor</a>
+      <a href="{{ url_for('about') }}">About</a>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-container">
+  <!-- Upload Box -->
+  <div class="upload-box">
+    <h2>Upload MRI Scan</h2>
+    <form method="POST" enctype="multipart/form-data">
+      <label class="upload-label">
+        <span class="plus-icon">+</span>
+        Upload .nii or .nii.gz File
+        <input id="fileInput" type="file" name="nii_file" accept=".nii,.nii.gz" required>
+      </label>
+      <p id="uploadStatus" style="color: green; display: none; margin-bottom: 10px;">✔ File uploaded</p>
+      <button type="submit">Upload & Predict</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const fileInput = document.getElementById('fileInput');
+  const uploadStatus = document.getElementById('uploadStatus');
+
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length > 0) {
+      uploadStatus.style.display = 'block';
+    } else {
+      uploadStatus.style.display = 'none';
+    }
+  });
+</script>
+
+
+  <!-- RESULTS SECTION -->
+  {% if prediction %}
+  <div class="results">
+    <h2>Prediction: {{ prediction }}</h2>
+    <p>Confidence: {{ confidence }}</p>
+    <p>Accuracy: {{ accuracy }}</p>
+
+    <h3>Slice Confidence Scores</h3>
+
+<div style="width: 100%; max-width: 700px; height: 300px; overflow: auto; border: 1px solid #ccc; border-radius: 10px; padding: 10px; margin: 0 auto;">
+  <canvas id="sliceChart" width="600" height="250"></canvas>
+</div>
+
+<script>
+  const scores = {{ slice_scores | tojson }};
+  const ctx = document.getElementById('sliceChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: scores.map((_, i) => 'Slice ' + i),
+      datasets: [{
+        label: 'Confidence',
+        data: scores,
+        backgroundColor: 'rgba(54, 162, 235, 0.6)'
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 1
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+</script>
+  </div>
+  {% endif %}
+
+  <!-- call button -->
+  <a href="/consult" class="call-button" title="Consultation">
+  📞 Consultation
+</a>
+
+<footer class="footer">
+  <p>&copy; 2025 NeuroV &mdash; For Educational Use Only</p>
+</footer>
+
+</body>
+</html>
