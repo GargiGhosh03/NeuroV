@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | NeuroV</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fbfe;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #273c75;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+  color: hsl(225, 60%, 85%);
+}
+
+h2 {
+  color: hsl(225, 60%, 45%);
+}
+
+    p {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .highlight {
+      background-color: #eef3fd;
+      border-left: 4px solid #4a69bd;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About NeuroV</h1>
+    <p>AI-assisted tool for early detection of brain tumors using MRI scans</p>
+  </header>
+
+  <div class="container">
+    <h2>Overview</h2>
+    <p>
+      NeuroV is a machine learning-based web application designed to analyze brain MRI scans and detect the likelihood of a tumor. By leveraging deep convolutional neural networks trained on medical imaging datasets, the model aids in early and accurate identification of potential anomalies in brain tissues.
+    </p>
+
+    <h2>Purpose</h2>
+    <p>
+      Brain tumors are a serious health concern, and early diagnosis plays a critical role in determining outcomes. This tool does not replace professional medical diagnosis, but it can support healthcare professionals and researchers in identifying early patterns that may require further clinical evaluation.
+    </p>
+
+    <div class="highlight">
+      <strong>Note:</strong> This tool is intended for educational and research purposes. It is not FDA-approved for clinical use. Users should always consult medical experts for diagnosis and treatment decisions.
+    </div>
+
+    <h2>How It Works</h2>
+    <p>
+      Our deep learning model analyzes input MRI scans (preferably in T1CE modality) and classifies them as either <strong>tumor</strong> or <strong>no tumor</strong>. The model was trained on 2D slices extracted from a widely used open-source dataset (e.g., BraTS), processed through a CNN architecture optimized for medical image classification.
+    </p>
+
+    <h2>Why AI in Medical Imaging?</h2>
+    <p>
+      Artificial Intelligence, particularly deep learning, has shown great potential in radiology and diagnostic imaging. Models can learn intricate patterns and pixel-level variations that are often subtle to the human eye. When used responsibly, AI can improve diagnostic confidence and reduce human error.
+    </p>
+
+    <h2>Continued Development</h2>
+    <p>
+      The classifier is continually being improved with better data augmentation, model refinement, and user feedback. Future updates aim to support multi-class tumor classification, segmentation overlays, and integration with DICOM viewers.
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 NeuroV | Developed for educational and non-diagnostic use
+  </footer>
+
+</body>
+</html>
