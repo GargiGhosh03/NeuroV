@@ -21,3 +21,5 @@ The model used is a custom **Convolutional Neural Network** (CNN) trained on the
 
 > 📦 The model file `brain_lesion_classifier.pth` is loaded using PyTorch's `state_dict`.
 
+
+<br> <div align="center"> <div style="border: 2px solid #ccc; border-radius: 12px; padding: 10px; max-width: 90%; background-color: #f9f9f9;"> <img src="https://github.com/user-attachments/assets/0efb2e99-0318-427c-b68a-ec819e7fae69" alt="Model Screenshot" style="max-width:100%; border-radius: 8px;" /> <p style="text-align: center; font-style: italic; color: #555; margin-top: 10px;"> 🧪 “This is the model inference interface where users can upload MRI slices (.nii or .nii.gz) and receive tumor predictions.” </p> </div> </div>
