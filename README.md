@@ -42,14 +42,14 @@ The model used is a custom **Convolutional Neural Network** (CNN) trained on the
 
 ---
 
-### 📊 Prediction Output
+### 📊 Overview/ Treatments
 
 <table>
   <tr>
     <td style="width: 50%; vertical-align: top; padding: 10px;">
       <p>
-        After upload, each slice is passed through the CNN model.<br><br>
-        Predictions are visualized with class probabilities, highlighting detected slices to guide clinicians.
+        Brain tumor depends upon several factors including the type, size, location of the tumor, and the patient's overall health.<br><br>
+        Tells about the different kinds of treatments available for the according to the results. 
       </p>
     </td>
     <td style="width: 50%; padding: 10px;">
@@ -60,7 +60,7 @@ The model used is a custom **Convolutional Neural Network** (CNN) trained on the
 
 ---
 
-### ✅ Aggregated Diagnosis
+### ✅ Results
 
 <table>
   <tr>
@@ -72,8 +72,7 @@ The model used is a custom **Convolutional Neural Network** (CNN) trained on the
       </p>
     </td>
     <td style="width: 50%; padding: 10px;">
-      <img src="https://github.com/user-attachments/assets/e7734c80-d080-4a47-95b1-cc98b5ca342e" alt="Final Diagnosis" style="max-width: 100%; border-radius: 10px;" />
+      <img src="https://github.com/user-attachments/assets/c005fab3-763e-4c1a-b31b-dc88f8d03908" alt="Final Diagnosis" style="max-width: 100%; border-radius: 10px;" />
     </td>
   </tr>
 </table>
-
