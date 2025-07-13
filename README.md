@@ -76,3 +76,13 @@ The model used is a custom **Convolutional Neural Network** (CNN) trained on the
     </td>
   </tr>
 </table>
+
+## ⚙️ Setup Instructions
+
+### 🔧 Prerequisites
+
+- Python 3.8+
+- PyTorch
+- Nibabel
+- Streamlit
+- torchvision, numpy, matplotlib
