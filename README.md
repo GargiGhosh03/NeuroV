@@ -23,3 +23,9 @@ The model used is a custom **Convolutional Neural Network** (CNN) trained on the
 
 
 <br> <div align="center"> <div style="border: 2px solid #ccc; border-radius: 12px; padding: 10px; max-width: 90%; background-color: #f9f9f9;"> <img src="https://github.com/user-attachments/assets/0efb2e99-0318-427c-b68a-ec819e7fae69" alt="Model Screenshot" style="max-width:100%; border-radius: 8px;" /> <p style="text-align: center; font-style: italic; color: #555; margin-top: 10px;"> 🧪 “This is the model inference interface where users can upload MRI slices (.nii or .nii.gz) and receive tumor predictions.” </p> </div> </div>
+
+
+<br> <div align="center"> <div style="border: 2px solid #ccc; border-radius: 12px; padding: 10px; max-width: 90%; background-color: #f9f9f9;"> <img width="1831" height="843" alt="Screenshot 2025-07-07 130406" src="https://github.com/user-attachments/assets/6a332ce4-f12a-4992-bb8a-b3aefb36810a" /> <p style="text-align: center; font-style: italic; color: #555; margin-top: 10px;">
+
+
+<br> <div align="center"> <div style="border: 2px solid #ccc; border-radius: 12px; padding: 10px; max-width: 90%; background-color: #f9f9f9;"> <img width="1844" height="850" alt="Screenshot 2025-07-07 130423" src="https://github.com/user-attachments/assets/e7734c80-d080-4a47-95b1-cc98b5ca342e" /> <p style="text-align: center; font-style: italic; color: #555; margin-top: 10px;">
