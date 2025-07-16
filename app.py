@@ -38,7 +38,7 @@ class BrainLesionClassifier(nn.Module):
 
 # === Load the model ===
 model = BrainLesionClassifier()
-model.load_state_dict(torch.load(r'E:\CV REQUIREMENTS\BrainlyAI\Brain\brain_lesion_classifier.pth', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load(r'model/brain_lesion_classifier.pth', map_location=torch.device('cpu')))
 model.eval()
 
 # === Routes ===
